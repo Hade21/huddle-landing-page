@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: url('./images/bg-desktop.svg');
+    background-color: hsl(257, 40%, 49%);
+}
+
+.container {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-rows: 30% 50% 20%;
+    grid-template-columns: 50% 50%;
+    color: #FFFFFF;
+}
+
+.logo {
+    width: 10em;
+    grid-area: 1/1/2/3;
+    margin-bottom: 40px;
+}
+
+.illustration {
+    width: calc(100% - 40em);
+    grid-area: 2/1/3/3;
+}
+
+.text {
+    grid-area: 2/2/3/3;
+    display: grid;
+    align-self: center;
+    gap: 18px;
+    padding-left: 36px;
+}
+
+.text>h1 {
+    font-family: 'Poppins';
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.text>p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.tombol {
+    padding: 16px 64px;
+    border-radius: 50px;
+    color: hsl(257, 40%, 49%);
+    background-color: #FFFFFF;
+    outline: none;
+    width: fit-content;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.tombol:hover {
+    color: #FFFFFF;
+    background-color: hsl(300, 69%, 71%);
+}
+
+.footer-logo {
+    grid-area: 3/1/4/3;
+    text-align: right;
+}
+
+.footer-logo>i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    min-height: 20px;
+    padding: 5px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.footer-logo>i:hover {
+    color: hsl(300, 69%, 71%);
+    border: 1px solid hsl(300, 69%, 71%);
+}
+
+.attribution {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.attribution a {
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media (max-width:450px) {
+    body {
+        background: url('./images/bg-mobile.svg');
+        background-color: hsl(257, 40%, 49%);
+        background-repeat: no-repeat;
+        object-fit: cover;
+        object-position: center;
+    }
+    .container {
+        width: 85%;
+        display: block;
+        text-align: center;
+        margin: 30px auto;
+        overflow: auto;
+    }
+    .logo {
+        float: left;
+        margin-bottom: 60px;
+    }
+    .illustration {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .text {
+        padding-left: 0;
+    }
+    .text>h1 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .text>p {
+        font-size: 18px;
+        line-height: 32px;
+    }
+    .tombol {
+        width: 70%;
+        margin: 20px auto;
+    }
+    .footer-logo {
+        text-align: center;
+        margin-top: 60px;
+    }
+}
